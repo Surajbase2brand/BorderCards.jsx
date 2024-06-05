@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated_card {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 500px;
+  width: 350px;
+}
+
+.animated-card-before {
+  position: absolute;
+  transition: 0.3s;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    filter: hue-rotate(350deg);
+  }
+}
+
+.card {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.tilted {
+  transform: rotate3d(1, 0, 0, 40deg);
+}
